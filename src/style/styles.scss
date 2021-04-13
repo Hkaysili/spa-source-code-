@@ -1,0 +1,1039 @@
+$xsmall: 300px;
+$csmall: 497px;
+$small: 767px;
+$medium:980px;
+$large:1024px;
+$xlarge:1920px;
+$ol : ".object-list";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'HindVadodara', sans-serif;
+   
+  .fade-in{
+    transition: opacity 1s ease; 
+  }
+  .fade-out{
+    opacity: 0;
+    transition: opacity 1s ease; 
+  }
+
+  .popupTitle{
+    position: fixed;
+    top: 0;
+    height: 30px;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: #fdfdfd;
+    font-size: 1.4em;
+    padding: 3px 0px 1px 10px;
+  }
+  .popupContentFrame{
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 9%;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    
+    .popupContent{
+      position: relative;
+      width: 100%;
+      color: #676767;
+      font-weight: bolder;
+      text-align: center;
+    } 
+  }
+
+  
+  .linkName_Frame{
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: center !important;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+
+    .linkName_{
+      position: absolute;
+      color: black !important;
+      font-size: 2em;
+      font-weight: bolder;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .removeBtnFrame{
+    position: fixed;
+    right: 0;
+    top: 2px;
+    z-index: 100000000000000;
+    color: #fff;
+
+    .removeBtn{
+      position: relative;
+    }
+  }
+
+  .btn_frame{
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 100%;
+    min-width: 200px;
+    margin-top: 16%;
+  }
+
+  .mr-20{margin-right: 20px;}
+  
+  .MuiLink-underlineHover:hover{text-decoration: none;}
+  .mt-10{margin-top: 10px;}
+  @media screen and (max-width:$xlarge) and (min-width:$large){
+    font-size: 14px!important;
+    .object-list--frame{
+      position: relative;
+    }
+    .ml_5_y{
+      margin-left: 5%;
+    }
+    .ml_15{margin-left: 15px;}
+    #addLinkFrame{
+      padding-top: 3%;
+ 
+        #name_val_{
+          opacity: 0;
+          pointer-events:none;
+          display: none;
+        }
+        #url_val_{
+          opacity: 0;
+          pointer-events:none;
+          display: none;
+        } 
+
+        .alertFrame{
+          position: fixed;
+          top: 20px;
+          z-index: 10000000;
+          right: 0;
+          .alertSpan{
+              position: relative;  
+          }
+        }
+    
+
+      button:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      button:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+    }
+  }
+
+  @media screen and (max-width: $medium) and (min-width: $xsmall) {
+    #addLinkFrame{ 
+      .MuiTypography-root.MuiLink-root.MuiLink-underlineHover.MuiLink-button.MuiTypography-body2.MuiTypography-colorPrimary{
+        margin-left: 9%;
+        top: 10px;
+        background: #354499;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        margin-bottom: 8%;
+      }
+    }
+  }
+  @media screen and (max-width: $xlarge) and (min-width: $large) {
+      #addLinkFrame{ 
+           .alertFrame {
+            position: fixed;
+            top: 20px;
+            z-index: 10000000;
+            right: 0;
+            width: 30vh;
+           }
+           .wframe_name{
+              position: absolute;
+              top: 13%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+          }
+            
+           .wframe_url{
+              position: absolute;
+              top: 21%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+           }
+        } 
+  }
+  @media screen and (max-width:$large) and (min-width:$medium){
+    font-size: 12px!important;
+ 
+  }
+  @media screen and (max-width:$medium) and (min-width:$small){
+    font-size: 12px!important;
+    ul.MuiPagination-ul{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #addLinkFrame{ 
+           .alertFrame {
+            position: fixed;
+            top: 20px;
+            z-index: 10000000;
+            right: 0;
+            width: 30vh;
+           }
+           .wframe_name{
+              position: absolute;
+              top: 15%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+          }
+            
+           .wframe_url{
+              position: absolute;
+              top: 24%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+           }
+        } 
+  }
+  
+  @media screen and (max-width:$small) and (min-width:$csmall){
+    font-size: 12px!important;
+    ul.MuiPagination-ul{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #addLinkFrame{ 
+      .alertFrame {
+      position: fixed;
+      bottom: 20px;
+      z-index: 10000000;
+      right: 0;
+      width: 30vh;
+      }
+      .wframe_name{
+        position: fixed;
+        bottom: 13%;
+        z-index: 100000;
+        left: 0;
+        width: 100%;
+      .alert{
+        padding-left: 5vh;
+        position: relative;
+      }
+    }
+      
+      .wframe_url{
+        position: fixed;
+        bottom: 5%;
+        z-index: 100000; 
+        width: 100%;
+        left: 0; 
+        .alert{
+          padding-left: 5vh;
+          position: relative;
+        }
+      }
+  } 
+  }
+  @media screen and (max-width:$csmall) and (min-width:321px){
+    font-size: 10px!important;
+    ul.MuiPagination-ul{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #addLinkFrame{ 
+           .alertFrame {
+            position: fixed;
+            bottom: 20px;
+            z-index: 10000000;
+            right: 0;
+            width: 30vh;
+           }
+           .wframe_name{
+              position: absolute;
+              bottom: 20%;
+              z-index: 100000;
+              right: 9vh;
+            .alert{
+              position: relative;
+            }
+          }
+            
+           .wframe_url{
+              position: absolute;
+              bottom:  28%;
+              z-index: 100000;
+              right: 10vh;
+            .alert{
+              position: relative;
+            }
+           }
+        } 
+  }
+
+  @media screen and (max-width:320px) and (min-width:$xsmall){
+    font-size: 12px!important;
+    ul.MuiPagination-ul{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #addLinkFrame{ 
+           .alertFrame {
+            position: fixed;
+            bottom: 20px;
+            z-index: 10000000;
+            right: 0;
+            width: 30vh;
+           }
+           .wframe_name{
+              position: absolute;
+              bottom: 20%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+          }
+            
+           .wframe_url{
+              position: absolute;
+              bottom: 28%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+           }
+        } 
+  }
+
+  @media screen and (max-width:$xsmall){
+    font-size: 12px!important;
+    ul.MuiPagination-ul{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #addLinkFrame{ 
+           .alertFrame {
+            position: fixed;
+            bottom: 20px;
+            z-index: 10000000;
+            right: 0;
+            width: 30vh;
+           }
+           .wframe_name{
+              position: absolute;
+              bottom: 20%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+          }
+            
+           .wframe_url{
+              position: absolute;
+              bottom: 28%;
+              z-index: 100000;
+              right: 3vh;
+            .alert{
+              position: relative;
+            }
+           }
+        } 
+  }
+
+
+  @media screen and (max-width:388px) and (min-width:240px){
+    #addLinkFrame{ 
+        .alertFrame {
+        position: fixed;
+        bottom: 20px;
+        z-index: 10000000;
+        right: 0;
+        width: 30vh;
+        }
+        .wframe_name{
+          position: fixed;
+          bottom: 13%;
+          z-index: 100000;
+          left: 0;
+          width: 100%;
+        .alert{
+          padding-left: 5vh;
+          position: relative;
+        }
+      }
+        
+        .wframe_url{
+          position: fixed;
+          bottom: 5%;
+          z-index: 100000; 
+          width: 100%;
+          left: 0; 
+          .alert{
+            padding-left: 5vh;
+            position: relative;
+          }
+        }
+    } 
+  }
+
+  @media screen and (max-width: 768px) and (min-width:320px) {
+    .ReactModal__Content.ReactModal__Content--after-open{
+      width: 100%!important;
+      top: 40%!important;
+    }
+  }
+  
+  @media screen and (min-width:1024px) {
+      ul.MuiPagination-ul {
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 10vh;
+    }
+  }
+
+  @media screen and (max-width:$small) and (min-width:$xsmall)  {
+    #addLinkFrame{ 
+      .lu_frame , .ln_frame {
+        min-width: 100%; 
+        justify-content: center;
+      }
+      .makeStyles-root-4 > *{
+        width: 28vh!important;
+      } 
+      .alertFrame{ 
+        width: 65% !important;
+        left: 11%;
+        bottom: 24%;
+        position: absolute;
+      }
+    }
+  }
+
+
+
+  @media screen and (max-width: 1920px) and (min-width:1024px) {
+    .alertDeleteFrame{
+          position: fixed; 
+          width: auto;
+          top: 10px;
+          background: #edf7ed;
+          padding: 1% 5%;
+          text-align: center;
+          right: 30vh;
+          border-top: 2px solid #313f8d;
+          border-bottom: 2px solid #313f8d;
+          border-radius: 15px;
+          color: black;
+          font-size: 1.2em;
+      .alertDeleteSpan{
+        position: relative; 
+        font-size: 1.6em;
+        font-weight: bolder;
+        margin-right: 8px;
+        text-decoration: underline;
+      }
+    }    
+  }
+
+  
+  @media screen and (max-width: 1024px) and (min-width:768px) {
+    .alertDeleteFrame{
+      position: absolute;
+      bottom: 30%;
+      width: 100%;
+      background: #3f51b5;
+      padding: 7%;
+      text-align: center;
+      left: 0;
+      border-top: 2px solid #313f8d;
+      border-bottom: 2px solid #313f8d;
+      color: #fff;
+      font-size: 1.5em;
+      .alertDeleteSpan{
+        position: relative; 
+        font-size: 1.9em;
+        font-weight: bolder;
+        margin-right: 8px;
+      }
+    }   
+  } 
+  
+  @media screen and (max-width: 768px) and (min-width:573px) {
+    .alertDeleteFrame{
+      position: absolute;
+      bottom: 30%;
+      width: 100%;
+      background: #3f51b5;
+      padding: 7%;
+      text-align: center;
+      left: 0;
+      border-top: 2px solid #313f8d;
+      border-bottom: 2px solid #313f8d;
+      color: #fff;
+      font-size: 1.5em;
+      .alertDeleteSpan{
+        position: relative; 
+        font-size: 1.9em;
+        font-weight: bolder;
+        margin-right: 8px;
+      }
+    }   
+  }
+
+  
+  @media screen and (max-width:  573px) and (min-width:240px) {
+    .alertDeleteFrame{
+      position: absolute;
+      bottom: 30%;
+      width: 100%;
+      background: #3f51b5;
+      padding: 7%;
+      text-align: center;
+      left: 0;
+      border-top: 2px solid #313f8d;
+      border-bottom: 2px solid #313f8d;
+      color: #fff;
+      font-size: 1.5em;
+        .alertDeleteSpan{
+          position: relative; 
+          font-size: 1.9em;
+          font-weight: bolder;
+          margin-right: 8px;
+        }
+      }   
+  }
+.remove-button-frame{display: none;}
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  .mt-20{
+    margin-top:20px;
+  }
+  .mb-20{
+    margin-bottom:20px;
+  }
+  .pt-10{
+    padding-top: 10px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  .MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded{
+    top: 70px!important;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  #navbar {
+    position: relative; 
+    background-color: #3f51b5; 
+
+    .MuiAppBar-colorPrimary{
+      box-shadow: none;
+    }
+    .MuiInput-underline:before{
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .MuiSelect-select.MuiSelect-select{ 
+      border-radius: 8px;
+    }
+   
+    @media screen and (max-width: $small) {
+       .justify-content-md{justify-content: center;}
+    }
+    @media screen and (min-width: $small) {
+       .justify-content-lg{
+        justify-content: center;
+       }
+       
+      .example-grow .parent {
+        display: flex;
+      }
+
+      .example-grow .item {
+        width: 12%;
+      }
+
+      .example-grow .item:nth-child(2) {
+        flex-grow: 2;
+        background: lightgreen;
+      }
+    }
+  }
+
+
+  .object-list{
+    position: relative;   
+    display: inline-block;
+    -webkit-transition: all 700ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -moz-transition: all 700ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -ms-transition: all 700ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -o-transition: all 700ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    transition: all 700ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -webkit-transform: translateY(0) scale(0.95, 0.95);
+    -moz-transform: translateY(0) scale(0.95, 0.95);
+    -ms-transform: translateY(0) scale(0.95, 0.95);
+    -o-transform: translateY(0) scale(0.95, 0.95);
+     transform: translateY(0) scale(0.95, 0.95);      
+     padding: 0.56em;
+     transition: padding .3s linear, width .2s linear;   
+
+    &:hover {
+      box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.5);
+      
+      padding: .6em;
+      width: 90%;
+
+      
+      .object-list-rb-left  {width: 50%;}
+      .object-list-rb-right  {width: 50%;}
+
+
+      @media screen and (max-width: $large) {
+        -webkit-transform: translateY(-5px) scale(1.05);
+        -moz-transform: translateY(-5px) scale(1.05);
+        -ms-transform: translateY(-5px) scale(1.05);
+        -o-transform: translateY(-5px) scale(1.05);				
+        transform: translateY(-5px) translateX(1.4em) scale(1.05);    
+      }
+      
+
+      @media screen and (min-width: $large) {
+       left: -0.88%;
+       -webkit-transform: translateY(-5px) scale(1.05);
+       -moz-transform: translateY(-5px) scale(1.05);
+       -ms-transform: translateY(-5px) scale(1.05);
+       -o-transform: translateY(-5px) scale(1.05);				
+       transform: translateY(-5px) translateX(1.4em) scale(1.05);   
+        .object-list-rb-left  {width: 14%;}
+        .object-list-rb-right  {width: 20%;}
+      }
+
+      .object-list-right{
+        width: 60%;
+      }
+
+      .remove-button-frame{
+          display: block;
+        button{
+          right: 0;
+          float: right;
+          top: 0;
+          position: absolute;
+          margin-top: 0; 
+        }  
+
+        .MuiButtonBase-root{
+          border-radius: 0 0 0 10px!important;
+          min-width: 10px;
+
+        }
+      }
+
+      @media screen and (max-width:$medium) and (min-width:$small){ 
+        max-width: 92%;
+        left: 3%;
+      }
+    }  
+
+    &-left{
+      position: relative;
+      background-color: #ececec;
+      height: 12vh;
+      width: 100%; 
+      border: .12em solid darken(#ececec, 20%);
+      border-radius: 10px;
+       
+      @media screen and (min-width:$large){  
+        height: 18vh;
+      }
+      @media screen and (max-width:$large) and (min-width:$medium){ 
+        width: 20%;
+        height: 18vh;
+      }
+      @media screen and (max-width:$medium) and (min-width:$small){ 
+        width:15%;
+        height: 18vh;
+      }
+      @media screen and (max-width:$small) and (min-width:$xsmall){  
+        width: 30%;
+        height: 10em; 
+      }
+      @media screen and (max-width:$xsmall){ 
+        margin-top: 0;
+        width: 25%;
+      }
+
+      .points-frame{
+         width: 100%;
+         height: 100%;
+         justify-content: center;
+         padding: 10%;
+
+        @media screen and (max-width:$xlarge) and (min-width:$large){ 
+        }
+        @media screen and (max-width:$large) and (min-width:$medium){ 
+        }
+        @media screen and (max-width:$medium) and (min-width:$small){            
+        }
+        @media screen and (max-width:$small) and (min-width:$xsmall){           
+        }
+        @media screen and (max-width:$xsmall){             
+        }
+
+        .point-count{
+          text-align: center;
+          font-weight: bold;
+          position: absolute;
+          top: .34em; 
+          font-size: 3.4em;
+
+         
+          @media screen and (min-width:$large){ 
+            top: .34em;
+            left: 0%;
+            position: relative;
+          }
+          @media screen and (max-width:$large) and (min-width:$medium){ 
+            width: 30%; 
+            float: left; 
+          }
+          @media screen and (max-width:$medium) and (min-width:$small){ 
+            top: .34em;
+            left: 35%;
+          }
+          @media screen and (max-width:$small) and (min-width:$xsmall){   
+            top: .54em;
+            left: 35%;
+          }
+          @media screen and (max-width:$xsmall){ 
+            padding: 0;
+            left: .4em;
+            top:0;
+            font-size: 3em;
+          }
+        }
+
+        .point-span{
+          position: absolute;
+          bottom: 2em;
+          font-weight: 400;
+          font-size: 1.2em;
+          left: 2.2em;
+
+
+          @media screen and (min-width:$large){  
+            left: 1.2em!important;
+            bottom: 1.2em;
+          }
+          @media screen and (max-width:$large) and (min-width:$medium){ 
+          }
+          @media screen and (max-width:$medium) and (min-width:$small){ 
+            bottom: 1.4em;
+            left: 27%;
+          }
+          @media screen and (max-width:$small) and (min-width:$xsmall){ 
+            bottom: 1.2em;
+            left: 27%;
+          }
+          @media screen and (max-width:$xsmall){ 
+            padding: 0;
+            bottom: 1em;
+            left: 1em;
+            font-size: .8em;
+          } 
+        } 
+      }
+    } 
+
+    &-right{
+      position: relative; 
+      padding-left: 3%;
+
+      
+     
+      @media screen and (max-width:$xlarge) and (min-width:$large){ 
+      }
+      @media screen and (max-width:$large) and (min-width:$medium){  
+      }
+      @media screen and (max-width:$medium) and (min-width:$small){ 
+        width: 85%;  
+        height: 11em;
+      }
+      @media screen and (max-width:$small) and (min-width:$xsmall){ 
+        width:70%;  
+        height: 11em;
+      }
+      @media screen and (max-width:$xsmall){ 
+        width: 75%; 
+        float: left; 
+        height: 12vh;
+      }
+
+
+      .object-list-rt{
+ 
+        @media screen and (max-width:$xlarge) and (min-width:$large){ 
+        }
+        @media screen and (max-width:$large) and (min-width:$medium){ 
+        }
+        @media screen and (max-width:$medium) and (min-width:$small){ 
+        }
+        @media screen and (max-width:$small) and (min-width:$xsmall){ 
+          height: 6.6em;
+        }
+        @media screen and (max-width:$xsmall){ 
+          height: 5vh;
+        }
+  
+        .object-title{
+          font-size: 1.9em;
+          font-weight: bold;
+          color: rgb(43, 42, 42); 
+          @media screen and (max-width:$xsmall){ 
+            font-size: 1.1em;
+          } 
+        }
+        .object-link{
+          position: relative;
+          color : lighten($color:  rgb(43, 42, 42), $amount: 20%);          
+          @media screen and (max-width:$xsmall){ 
+            font-size: .79em;
+          }
+        }
+      }
+
+      .object-list-rb{ 
+        width: 100%;  
+        margin: 20px 10px 60px 0px;
+        
+        @media screen and (max-width:$small) and (min-width:$xsmall){ 
+          margin: 12px 0px 0px 0px;
+        }
+        @media screen and (max-width:$xsmall){  
+          margin: 12px 0px 0px 0px;
+
+          
+          .object-list-rb-frame{
+            width: 100%;
+            float: left;
+          }
+        } 
+
+        
+
+        &-left{   
+          @media screen and (min-width:1024px) and (max-width:1200px) {
+            width:14%;   float: left;
+          }
+          @media screen and (min-width:1201px) and (max-width:1900px) {
+            width: 13%;    float: left;
+          }
+          @media screen and (max-width:$large) and (min-width:$medium){ 
+            width: 14%; 
+            float: left; 
+          }
+          @media screen and (max-width:$medium) and (min-width:$small){ 
+            width: 18%; 
+            float: left; 
+          }
+          @media screen and (max-width:$small) and (min-width:$xsmall){ 
+            width: 50%; 
+            float: left; 
+          }
+          @media screen and (max-width:$xsmall){ 
+            width: 100%!important; 
+            float: left;   
+          } 
+
+          button{
+            @media screen and (max-width:$small) and (min-width:$xsmall){ 
+                padding: 0;
+                span 
+                {
+                  font-size: 1em;
+                }
+                span.ud-span
+                {
+                  font-size: 0.53em;
+                  margin-left: 5px;
+                }
+            }
+            @media screen and (max-width:$xsmall) {
+              padding: 0;
+              margin-top: 0px; 
+              text-align: left;
+              float: left;
+              span 
+              { 
+                font-size: 1.2em;
+              }
+              span.ud-span
+              {
+                font-size: 0.53em;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+ 
+
+        &-right{ 
+          float: left;
+          width: 50%;
+          text-align: left;
+          
+          @media screen and (min-width:$large) { 
+            text-align: left;
+          }
+          button{ 
+            @media screen and (max-width:$small) and (min-width:$xsmall){ 
+                position: relative;
+                padding: 0;
+                span 
+                {
+                  font-size: 1em;
+                }
+                span.ud-span
+                {
+                  font-size: .60em;
+                  margin-left: 5px; 
+                }
+                .ud-icon{
+                  position: relative;
+                  left: 0;
+                }
+            }
+            @media screen and (max-width:$xsmall) {
+              padding: 0;
+              margin-top: 0px;
+              width: 100%;
+              text-align: left;
+              float: left;
+              span 
+              {
+                font-size: 1.2em;  
+              }
+              span.ud-span
+              {
+                font-size: 0.54em;
+                left: 5px;
+                position: relative;
+                width: 100%;
+                display: inline-block;
+              }
+              .ud-icon{
+                position: relative;
+                left: 0;
+              }
+            }
+          }
+
+          @media screen and (max-width:$xlarge) and (min-width:$large){ 
+            width: 14%; 
+            float: left; 
+          }
+          @media screen and (max-width:$large) and (min-width:$medium){ 
+            width: 14%; 
+            float: left; 
+          }
+          @media screen and (max-width:$medium) and (min-width:$small){ 
+            width: 50%; 
+            float: left; 
+          }
+          @media screen and (max-width:$small) and (min-width:$xsmall){ 
+            width: 50%; 
+            float: left;
+          }
+          @media screen and (max-width:$xsmall){ 
+            width: 100%; 
+            float: left;    
+            text-align: left;
+          }
+    
+        } 
+
+        .ud-icon{
+          font-size: 1em;
+        }
+        .ud-span{
+          font-size: .8em; 
+        }
+      }
+
+    }
+  }
+}
